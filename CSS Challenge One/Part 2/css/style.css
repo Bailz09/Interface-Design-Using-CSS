@@ -1,0 +1,176 @@
+
+body{
+    margin-left: 1.8rem; 
+}
+
+.first-header{
+    display: flex;
+    border-bottom: 2px solid #50160a ;
+}
+
+.first-header img{
+    width: 50%;
+    height: auto;
+}
+
+.first-header h1{
+    display: flex;
+    margin-top: 60px;
+    font-family: 'Fira', sans-serif;
+    color: #50160a;
+}
+
+header h2{
+    font-family: 'Roboto', sans-serif;
+    color: #50160a;
+    display: flex;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    color: red;
+    background-color: black;
+    padding: 10;
+    border-radius: 50px;
+}
+
+.flex img{
+    display: flex;  
+    margin-left: 30%;
+}
+
+#first-p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;   
+}
+
+#second-p{
+    font-family: 'Montserrat', sans-serif;
+    text-indent: 1.5rem;
+}
+
+#link2{
+    font-size: 1.5rem;
+}
+
+#second-p a:link,
+#link2:link{
+    color: #50160a;
+    font-weight: bold;
+    text-decoration: none;   
+}
+
+#second-p a:visited,
+#second-p a:focus,
+#link2:visited,
+#link2:focus{
+    color: orange;
+}
+
+#second-p a:hover,
+#link2:hover{
+    color: red;
+}
+
+#second-p a:active,
+#link2:active{
+    color: darkblue;
+}
+
+#playlist h2{
+    display:flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #50160a;
+}
+
+.first-table{
+    border-collapse: collapse;
+    background-color: #34495e;
+    color: #f3f3f3;
+    width: 100vw;
+    border: 2px solid black;
+}
+
+td{
+    padding: 8px;
+}
+
+thead th{
+    
+    text-align: left;
+    padding: 8px;
+    text-decoration: underline;
+}
+
+.first-body tr:nth-of-type(odd){
+    background-color: #16a085;
+}
+
+#features{
+    display: flex;
+    justify-content: center;
+}
+
+#features div{
+    margin-right: 7rem;
+}
+
+#features div ul,
+ol{
+    margin-right: 5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#features div h3{
+    text-decoration: underline;
+    margin-left: 1.4rem;
+    color: #50160a;  
+}
+
+#characteristics{
+    display: flex;
+    justify-content: center;
+    color: #50160a;  
+}
+
+.second-table{
+    margin-left: 25%;
+    border-collapse: collapse;
+    background-color: #34495e;
+    color: #f3f3f3;
+    width: 50vw;
+    border: 2px solid black;
+}
+
+.second-body tr:nth-of-type(odd){
+    background-color: #16a085;
+}
+
+footer{
+    margin-top: 1.8rem;
+    border-top: 2px solid #50160a ;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    
+}
