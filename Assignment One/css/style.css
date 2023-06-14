@@ -1,0 +1,201 @@
+body,
+.inner-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+header h1 {
+  font-family: "Tilt Prism", cursive;
+  margin-top: 0;
+  font-size: 4rem;
+}
+
+header h2 {
+  font-family: "Comforter", cursive;
+  font-size: 3.2rem;
+}
+
+header h1,
+header h2 {
+  display: flex;
+  justify-content: center;
+}
+
+header h2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+header h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid #000;
+}
+
+header abbr {
+  margin: 0 1%; /*space around the abbreviation */
+}
+
+.summary {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 999;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 15rem;
+}
+
+.summary a:link {
+  color: #e7b6df;
+  text-decoration: none;
+}
+
+.summary a:visited {
+  color: #965408;
+}
+
+.summary a:hover {
+  color: #ffffe0;
+}
+
+.summary a:active {
+  color: #90ee90;
+}
+
+.intro {
+  background-image: url(/img/header.jpg);
+  background-size: cover;
+}
+
+.preamble h3 {
+  font-family: "Comforter", cursive;
+  font-size: 2.4rem;
+  margin-left: 15%;
+}
+
+.preamble h3::before {
+  content: "";
+  display: inline-block;
+  width: 2em; /* adjust as per your image dimensions */
+  height: 2em; /* adjust as per your image dimensions */
+  background-image: url(/img/enlightenment.webp); /* specify the correct path to your image */
+  background-size: contain;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 1.5%;
+}
+
+.preamble p {
+  margin-left: 5%;
+  color: #edeade;
+
+  text-align: left;
+  margin-right: 45%;
+
+  font-size: 1.2em;
+}
+
+.preamble:nth-child(3) {
+  padding-bottom: 5%;
+}
+
+.explanation,
+.participation {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 5%;
+}
+
+.participation {
+  padding-right: 5%;
+}
+.benefits,
+.requirements {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 5%;
+}
+
+.requirements {
+  padding-right: 5%;
+  margin-bottom: 5%;
+}
+
+#zen-supporting h3 {
+  border-bottom: 1px solid #965408;
+  font-size: 2rem;
+  font-family: "Tilt Prism", cursive;
+}
+
+.explanation p {
+  font-size: 1.5em;
+  font-family: "Bebas Neue", sans-serif;
+}
+.participation p {
+  font-size: 1.3em;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.requirements p {
+  font-size: 1.2em;
+  font-family: "Bebas Neue", sans-serif;
+  
+}
+
+.benefits p {
+  font-size: 2.5em;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+#zen-supporting a:link {
+  color: #97391d;
+}
+
+#zen-supporting a:visited {
+  color: #398d4e;
+}
+
+#zen-supporting a:hover {
+  color: #555508;
+}
+
+#zen-supporting a:active {
+  color: #90ee90;
+}
+
+footer {
+    text-align: center;
+    
+}
+footer a {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 10%;
+    text-decoration: none;
+}
+
+.wrapper {
+    border-top: 1px solid #965408;
+    display: flex;
+    margin: 5%;
+}
+
+.design-selection,
+.design-archives,
+.zen-resources {
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
