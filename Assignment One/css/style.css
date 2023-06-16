@@ -2,6 +2,7 @@ body,
 .inner-wrapper {
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
 }
 
 header {
@@ -83,14 +84,19 @@ header abbr {
 .preamble h3::before {
   content: "";
   display: inline-block;
-  width: 2em; /* adjust as per your image dimensions */
-  height: 2em; /* adjust as per your image dimensions */
-  background-image: url(../img/enlightenment.webp); /* specify the correct path to your image */
+  width: 2em;
+  height: 2em;
+  background-image: url(../img/enlightenment.webp);
   background-size: contain;
   border-radius: 50%;
   background-repeat: no-repeat;
   vertical-align: middle;
   margin-right: 1.5%;
+}
+
+.preamble h3::before:hover {
+  filter: brightness(1.4);
+  filter: sepia(100%);
 }
 
 .preamble p {
@@ -149,7 +155,6 @@ header abbr {
 .requirements p {
   font-size: 1.2em;
   font-family: "Bebas Neue", sans-serif;
-  
 }
 
 .benefits p {
@@ -157,37 +162,62 @@ header abbr {
   font-family: "Bebas Neue", sans-serif;
 }
 
-#zen-supporting a:link {
-  color: #97391d;
+.requirements a,
+.participation a {
+  text-decoration: none;
+}
+
+.requirements a:link,
+.participation a:link {
+  color: #3986fa;
+}
+
+.requirements a:hover,
+.participation a:hover {
+  color: #fa1616;
+}
+
+#zen-supporting footer a:link {
+  color: #ffffff;
 }
 
 #zen-supporting a:visited {
-  color: #398d4e;
+  color: #fa1616;
 }
 
-#zen-supporting a:hover {
+#zen-supporting footer a:hover {
   color: #555508;
 }
 
 #zen-supporting a:active {
-  color: #90ee90;
+  color: #851773;
 }
 
 footer {
-    text-align: center;
-    
+  text-align: center;
 }
 footer a {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.5rem;
-    margin-top: 10%;
-    text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 10%;
+  text-decoration: none;
+  background-color: #918c8c;
+  padding: 0.5em;
+  border-radius: 15px;
+  transition: background-color 1s ease;
+}
+
+footer a:hover {
+  background-color: #ffffff;
+  padding: 10;
+  border-radius: 50px;
 }
 
 .wrapper {
-    border-top: 1px solid #965408;
-    display: flex;
-    margin: 5%;
+  border-top: 1px solid #965408;
+  display: flex;
+  margin: 5%;
+  margin-bottom: 0;
 }
 
 .design-selection,
@@ -199,3 +229,36 @@ footer a {
   padding: 0 10px;
 }
 
+.sidebar {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8634020618556701) 13%,
+    rgba(180, 98, 12, 0.46649484536082475) 91%
+  );
+}
+
+.sidebar ul {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  font-size: 1.2em;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.sidebar a {
+  color: #3986fa;
+  text-decoration: none;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.sidebar a:hover {
+  transform: rotate(360deg);
+}
+
+.sidebar h3 {
+  font-family: "Comforter", cursive;
+  font-size: 2rem;
+}
