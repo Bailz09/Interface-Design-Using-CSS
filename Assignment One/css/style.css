@@ -70,7 +70,7 @@ header abbr {
 }
 
 .intro {
-  background-image: url(/img/header.jpg);
+  background-image: url(../img/header.jpg);
   background-size: cover;
 }
 
@@ -85,7 +85,7 @@ header abbr {
   display: inline-block;
   width: 2em; /* adjust as per your image dimensions */
   height: 2em; /* adjust as per your image dimensions */
-  background-image: url(/img/enlightenment.webp); /* specify the correct path to your image */
+  background-image: url(../img/enlightenment.webp); /* specify the correct path to your image */
   background-size: contain;
   border-radius: 50%;
   background-repeat: no-repeat;
