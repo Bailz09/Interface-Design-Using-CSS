@@ -82,7 +82,8 @@ header abbr {
   margin-left: 15%;
 }
 
-.preamble h3::before { /* pseudo-element selector */
+.preamble h3::before {
+  /* pseudo-element selector */
   content: "";
   display: inline-block;
   width: 2em;
@@ -100,7 +101,8 @@ header abbr {
   filter: sepia(100%);
 }
 
-.preamble p { /* descendant combinator */
+.preamble p {
+  /* descendant combinator */
   margin-left: 5%;
   color: #edeade;
   text-align: left;
@@ -137,13 +139,14 @@ header abbr {
   margin-bottom: 5%;
 }
 
-#zen-supporting  h3 {
+#zen-supporting h3 {
   border-bottom: 1px solid #965408;
   font-size: 2rem;
   font-family: "Tilt Prism", cursive;
 }
 
-.explanation > p { /* child combinator */
+.explanation > p {
+  /* child combinator */
   font-size: 1.5em;
   font-family: "Bebas Neue", sans-serif;
 }
@@ -164,7 +167,8 @@ header abbr {
 }
 
 .requirements a[href],
-.participation a[href] { /* attribute selector */
+.participation a[href] {
+  /* attribute selector */
   text-decoration: none;
 }
 
@@ -263,4 +267,32 @@ footer a:hover {
 .sidebar h3 {
   font-family: "Comforter", cursive;
   font-size: 2rem;
+}
+/* A bit of responsiveness i needed to add even though i used responsive measurements */
+@media screen and (max-width: 600px) {
+  .summary {
+    margin: 0 10rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .summary {
+    margin: 0 5rem;
+  }
+
+  .benefits p {
+    font-size: 1.3em;
+  }
+
+  #zen-supporting h3 {
+    font-size: 1.5em;
+  }
+
+  footer a {
+    font-size: 1em;
+  }
+
+  .requirements {
+    float: none;
+  }
 }
