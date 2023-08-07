@@ -1,0 +1,207 @@
+/*I know you have commented a few times about keeping CSS ordered by typography etc.,
+but i just cant break the habit of keeping things in order of as they appear in the html
+structure, one more thing i wanted to note is the difference in size of my CSS, before 
+this class, this same project would have probably taken me upwards of 800 lines+!, WHAT A 
+DIFFERENCE! the techniques I learned from you throughout this course is GREATLY appreciated
+Thanks for a wonderful semester, all the best Kevin Bailey*/
+
+html {
+    color: #ffffff;
+    font-size: 10px;/*set a standard size for easy calculations */
+}
+
+@font-face {/*locally hosted web font */
+    font-family: "open_sansregular";
+    src: url("../assets/OpenSans-Regular-webfont.woff") format("woff");
+  }
+
+.page-wrapper {
+    background-image: url(../img/initial.jpg);
+    background-size: cover;
+}
+
+.corner-horizontal,
+.corner-vertical {
+    position: absolute;/*keeps the position in the top left corner */
+    top: 0;
+    left: 0;
+    z-index: 1;/*just to make sure the lines are always on top */
+}
+
+.corner-vertical {
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(39, 173, 93, 0.8463760504201681) 49%);
+    height: 5%;/*because the height of the viewport never really changes, percentage will not work to grow the line properly, see media query's */
+    width: .4em;
+}
+
+.corner-horizontal {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(39, 173, 93, 0.8463760504201681) 49%);
+    width: 7%;/*horizontal line grows beautifully with the size of the window, because resizing affects the width of the window */
+    height: .4em;
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header img {
+    position: absolute;/*keep the 'K' image always positioned in the same spot */
+    left: -1%;/*wanted the image a little closer to the left */
+    top: 1%; /*keeps it slightly below the horizontal line */
+    height: auto;
+    width: 10vw;/*assures that it grows with the viewport */   
+}
+
+header nav {
+    display: flex;
+    justify-content: end;
+}
+
+header nav ul {/*combinator selector */
+    list-style: none;
+    font-size: clamp(1.4rem, 4vw, 3rem);/*keeps the social images growing with the viewport, took me awhile to figure out they are attached to font sizing */ 
+}
+
+header nav ul li {
+    display: inline-block;
+}
+.sociallink {/*class selector */
+    color: gray;
+    text-decoration: none;   
+}
+
+.sociallink:active {
+    color: red;
+}
+
+#discordlist {/*ID selector*/
+    position: relative;/*had to add positioning for the add me on discord message to be able to use absolute positioning relative to the parent container*/
+}
+
+.discord-text {/*styling for when you hover over the discord icon */
+    display: none;/*is invisible until you hover */
+    position: absolute;
+    left: -600%;/*took me a long time to figure out how to get my message to display properly under the social icons, this is the only solution that worked the way i wanted it to  */
+    top: 100%;
+    white-space: nowrap;/*keeps the message on one line*/
+    z-index: 1;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgba(11,180,19,1) 0%, rgba(233,255,234,0.8883928571428571) 55%);
+    -webkit-background-clip: text;/*applies a gradient to the font colour */
+    color: transparent;
+}
+
+#discord:hover .discord-text {/*displays the message when hovering*/
+    display: block;
+}
+
+.main-wrapper {
+    width: 80%;
+    margin: 0 auto;/*keeps everything nice and centered in the page */
+    border: .2em dotted #ffffff;
+    border-radius: 1.5em;
+    padding: 2em;
+    position: relative;/*was having an issue with the header img invading the border at larger viewports, setting a position for the main wrapper fixed it, to my surprise without having to set z-index */ 
+}
+
+main {
+    width: 100%;
+    font-size: clamp(1.2rem, 2vw, 2.6rem);/*keeps all fonts growing with the viewport */
+}
+
+main div h1 {
+    font-family: 'Bungee Shade', cursive;
+}
+
+main div p:nth-child(2) {/*pseudo class selector */
+    font-family: 'School Bell', cursive;/*externally hosted web font */
+}
+
+p:not(main div p:nth-child(2)) { /*not selector to style all the other p elements in the document */
+    font-family: 'Syne Mono', monospace;
+    line-height: 1.3;
+}
+
+main > div > h2 { /*child combinator selector */
+    font-family: 'open_sansregular', sans-serif;/*locally hosted applied to a header text */
+    background: linear-gradient(90deg, rgba(11,180,19,1) 0%, rgba(233,255,234,0.8883928571428571) 55%);
+    -webkit-background-clip: text;/*applies a gradient to the font colour */
+    color: transparent;/*needed this for the gradient to work*/
+}
+
+.projects {
+    list-style: none;
+    padding-left: 0;
+}
+
+.projects li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border: .25em solid #333;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    color: #333;
+    background-color: #ffffff;
+    justify-content: center;
+}
+
+.projects h4 {
+    padding: 1em 2em;
+    font-family: 'Bungee Shade', cursive;
+}
+
+.projects li img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;/*keeps the images from getting distorted when resizing the window */
+    width: 60vw;
+    height: auto;
+}
+
+.projects li p {
+    margin-left: 1em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(1.2rem, 2vw, 2.6rem);
+}
+
+@media screen and (min-width: 37.5em) {
+
+    .corner-vertical {/*could not for the life of me get the vertical line to grow with the window size like the horizontal */
+        height: 8%;
+    }
+
+    .projects {
+        display: grid;/*changes my project boxes to a grid layout when at 600px and above */
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .projects li {
+        justify-content: flex-start;
+    }
+
+    .projects li img {
+        margin-left: 1em;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .corner-vertical {
+        height: 11%;
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .corner-vertical {
+        height: 15%;
+    }
+}
