@@ -82,7 +82,7 @@ header nav ul li {
 .discord-text {/*styling for when you hover over the discord icon */
     display: none;/*is invisible until you hover */
     position: absolute;
-    left: -600%;/*took me a long time to figure out how to get my message to display properly under the social icons, this is the only solution that worked the way i wanted it to  */
+    left: -800%;/*took me a long time to figure out how to get my message to display properly under the social icons, this is the only solution that worked the way i wanted it to  */
     top: 100%;
     white-space: nowrap;/*keeps the message on one line*/
     z-index: 1;
